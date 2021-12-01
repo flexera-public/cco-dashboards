@@ -1,0 +1,780 @@
+{
+  "area": "OrgDashboard",
+  "name": "AWS Purchase Options v2",
+  "config": {
+    "description": "",
+    "layoutId": "overview",
+    "widgets": [
+      {
+        "component": "caOverviewReport",
+        "description": "The cost data shown includes any potential adjustments. Note that Purchase Options \"Reserved\" & \"Savings Plan\" only show costs if your BillConnects have RI & SP Reallocation enabled. The upfront portions of RI / SP purchases are only reallocated for amortized costs.",
+        "filters": [
+          {
+            "id": "BarChartTypeParam",
+            "source": "manual",
+            "value": "percentage"
+          },
+          {
+            "id": "DimensionParam",
+            "source": "manual",
+            "value": [
+              "purchase_option"
+            ]
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "purchase_option": [
+                {
+                  "id": "On Demand"
+                },
+                {
+                  "id": "Reserved"
+                },
+                {
+                  "id": "Savings Plan"
+                },
+                {
+                  "id": "Spot"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonEC2"
+                }
+              ],
+              "vendor": [
+                {
+                  "id": "AWS",
+                  "name": "Amazon Web Services"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1607637906992",
+        "name": "EC2 Running Costs by Purchase Option",
+        "order": 0,
+        "zone": 1
+      },
+      {
+        "component": "caBreakdownTableReport",
+        "filters": [
+          {
+            "id": "GroupByParam",
+            "source": "inline"
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "line_item_type": [
+                {
+                  "id": "Usage"
+                },
+                {
+                  "id": "SavingsPlanCoveredUsage"
+                },
+                {
+                  "id": "DiscountedUsage"
+                }
+              ],
+              "purchase_option": [
+                {
+                  "id": "On Demand"
+                },
+                {
+                  "id": "Reserved"
+                },
+                {
+                  "id": "Savings Plan"
+                },
+                {
+                  "id": "Spot"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonEC2"
+                }
+              ],
+              "vendor": [
+                {
+                  "id": "AWS",
+                  "name": "Amazon Web Services"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1607638585485",
+        "name": "EC2 Running Costs",
+        "order": 2,
+        "zone": 1
+      },
+      {
+        "component": "caOverviewReport",
+        "filters": [
+          {
+            "id": "BarChartTypeParam",
+            "source": "manual",
+            "value": "percentage"
+          },
+          {
+            "id": "DimensionParam",
+            "source": "manual",
+            "value": [
+              "purchase_option"
+            ]
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "purchase_option": [
+                {
+                  "id": "On Demand"
+                },
+                {
+                  "id": "Reserved"
+                },
+                {
+                  "id": "Savings Plan"
+                },
+                {
+                  "id": "Spot"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonElastiCache"
+                }
+              ],
+              "vendor": [
+                {
+                  "id": "AWS",
+                  "name": "Amazon Web Services"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1607639653862",
+        "name": "ElastiCache Running Costs by Purchase Option",
+        "order": 3,
+        "zone": 1
+      },
+      {
+        "component": "caBreakdownTableReport",
+        "filters": [
+          {
+            "id": "GroupByParam",
+            "source": "inline"
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "purchase_option": [
+                {
+                  "id": "On Demand"
+                },
+                {
+                  "id": "Reserved"
+                },
+                {
+                  "id": "Savings Plan"
+                },
+                {
+                  "id": "Spot"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonElastiCache"
+                }
+              ],
+              "vendor": [
+                {
+                  "id": "AWS",
+                  "name": "Amazon Web Services"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1607639365779",
+        "name": "ElastiCache Running Costs",
+        "order": 4,
+        "zone": 1
+      },
+      {
+        "component": "caOverviewReport",
+        "filters": [
+          {
+            "id": "BarChartTypeParam",
+            "source": "manual",
+            "value": "percentage"
+          },
+          {
+            "id": "DimensionParam",
+            "source": "manual",
+            "value": [
+              "purchase_option"
+            ]
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "purchase_option": [
+                {
+                  "id": "On Demand"
+                },
+                {
+                  "id": "Reserved"
+                },
+                {
+                  "id": "Savings Plan"
+                },
+                {
+                  "id": "Spot"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonRDS"
+                }
+              ],
+              "vendor": [
+                {
+                  "id": "AWS",
+                  "name": "Amazon Web Services"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1607716013872",
+        "name": "RDS Running Costs by Purchase Option",
+        "order": 5,
+        "zone": 1
+      },
+      {
+        "component": "caBreakdownTableReport",
+        "filters": [
+          {
+            "id": "GroupByParam",
+            "source": "inline"
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "purchase_option": [
+                {
+                  "id": "On Demand"
+                },
+                {
+                  "id": "Reserved"
+                },
+                {
+                  "id": "Savings Plan"
+                },
+                {
+                  "id": "Spot"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonRDS"
+                }
+              ],
+              "vendor": [
+                {
+                  "id": "AWS",
+                  "name": "Amazon Web Services"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1607716265297",
+        "name": "RDS Running Costs",
+        "order": 6,
+        "zone": 1
+      },
+      {
+        "component": "caOverviewReport",
+        "filters": [
+          {
+            "id": "BarChartTypeParam",
+            "source": "manual",
+            "value": "percentage"
+          },
+          {
+            "id": "DimensionParam",
+            "source": "manual",
+            "value": [
+              "purchase_option"
+            ]
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "purchase_option": [
+                {
+                  "id": "On Demand"
+                },
+                {
+                  "id": "Reserved"
+                },
+                {
+                  "id": "Savings Plan"
+                },
+                {
+                  "id": "Spot"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonDynamoDB"
+                }
+              ],
+              "vendor": [
+                {
+                  "id": "AWS",
+                  "name": "Amazon Web Services"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1607720483947",
+        "name": "DynamoDB Running Costs by Purchase Option",
+        "order": 7,
+        "zone": 1
+      },
+      {
+        "component": "caBreakdownTableReport",
+        "filters": [
+          {
+            "id": "GroupByParam",
+            "source": "inline"
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "purchase_option": [
+                {
+                  "id": "On Demand"
+                },
+                {
+                  "id": "Reserved"
+                },
+                {
+                  "id": "Savings Plan"
+                },
+                {
+                  "id": "Spot"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonDynamoDB"
+                }
+              ],
+              "vendor": [
+                {
+                  "id": "AWS",
+                  "name": "Amazon Web Services"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1607721944330",
+        "name": "DynamoDB Running Costs",
+        "order": 8,
+        "zone": 1
+      },
+      {
+        "component": "caOverviewReport",
+        "filters": [
+          {
+            "id": "BarChartTypeParam",
+            "source": "manual",
+            "value": "percentage"
+          },
+          {
+            "id": "DimensionParam",
+            "source": "manual",
+            "value": [
+              "purchase_option"
+            ]
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "purchase_option": [
+                {
+                  "id": "On Demand"
+                },
+                {
+                  "id": "Reserved"
+                },
+                {
+                  "id": "Savings Plan"
+                },
+                {
+                  "id": "Spot"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonES"
+                }
+              ],
+              "vendor": [
+                {
+                  "id": "AWS",
+                  "name": "Amazon Web Services"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1607722959821",
+        "name": "ElasticSearch Running Costs by Purchase Option",
+        "order": 9,
+        "zone": 1
+      },
+      {
+        "component": "caBreakdownTableReport",
+        "filters": [
+          {
+            "id": "GroupByParam",
+            "source": "inline"
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "purchase_option": [
+                {
+                  "id": "On Demand"
+                },
+                {
+                  "id": "Reserved"
+                },
+                {
+                  "id": "Savings Plan"
+                },
+                {
+                  "id": "Spot"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonES"
+                }
+              ],
+              "vendor": [
+                {
+                  "id": "AWS",
+                  "name": "Amazon Web Services"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1607723193220",
+        "name": "ElasticSearch Running Costs",
+        "order": 10,
+        "zone": 1
+      },
+      {
+        "component": "caOverviewReport",
+        "filters": [
+          {
+            "id": "BarChartTypeParam",
+            "source": "manual",
+            "value": "percentage"
+          },
+          {
+            "id": "DimensionParam",
+            "source": "manual",
+            "value": [
+              "purchase_option"
+            ]
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "purchase_option": [
+                {
+                  "id": "On Demand"
+                },
+                {
+                  "id": "Reserved"
+                },
+                {
+                  "id": "Savings Plan"
+                },
+                {
+                  "id": "Spot"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonRedshift"
+                }
+              ],
+              "vendor": [
+                {
+                  "id": "AWS",
+                  "name": "Amazon Web Services"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1607723407685",
+        "name": "Redshift Running Costs by Purchase Option",
+        "order": 11,
+        "zone": 1
+      },
+      {
+        "component": "caBreakdownTableReport",
+        "filters": [
+          {
+            "id": "GroupByParam",
+            "source": "inline"
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "purchase_option": [
+                {
+                  "id": "On Demand"
+                },
+                {
+                  "id": "Reserved"
+                },
+                {
+                  "id": "Savings Plan"
+                },
+                {
+                  "id": "Spot"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonRedshift"
+                }
+              ],
+              "vendor": [
+                {
+                  "id": "AWS",
+                  "name": "Amazon Web Services"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1607723595572",
+        "name": "Redshift Running Costs",
+        "order": 12,
+        "zone": 1
+      }
+    ]
+  },
+  "visibility": "public",
+  "scope": []
+}

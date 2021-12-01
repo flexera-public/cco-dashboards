@@ -1,0 +1,151 @@
+{
+  "area": "OrgDashboard",
+  "name": "AWS EBS Volumes",
+  "config": {
+    "description": "",
+    "layoutId": "overview",
+    "widgets": [
+      {
+        "component": "caOverviewReport",
+        "filters": [
+          {
+            "id": "BarChartTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DimensionParam",
+            "source": "manual",
+            "value": [
+              "usage_type"
+            ]
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "resource_type": [
+                {
+                  "id": "Storage"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonEC2"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1636451323154",
+        "name": "Cost of EBS Volumes",
+        "order": 0,
+        "zone": 1
+      },
+      {
+        "component": "caBreakdownTableReport",
+        "filters": [
+          {
+            "id": "GroupByParam",
+            "source": "manual",
+            "value": [
+              "usage_type"
+            ]
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "resource_type": [
+                {
+                  "id": "Storage"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonEC2"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1636451726633",
+        "name": "EBS Volume Table",
+        "order": 1,
+        "zone": 1
+      },
+      {
+        "component": "caResourcesList",
+        "filters": [
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "resource_type": [
+                {
+                  "id": "Storage"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonEC2"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1636452480847",
+        "name": "EBS Volumes",
+        "order": 2,
+        "zone": 1
+      }
+    ]
+  },
+  "visibility": "public",
+  "scope": []
+}

@@ -1,0 +1,193 @@
+{
+  "area": "OrgDashboard",
+  "name": "AWS RDS Instances",
+  "config": {
+    "description": "",
+    "layoutId": "overview",
+    "widgets": [
+      {
+        "component": "caOverviewReport",
+        "filters": [
+          {
+            "id": "BarChartTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DimensionParam",
+            "source": "manual",
+            "value": [
+              "instance_type"
+            ]
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "service": [
+                {
+                  "id": "AmazonRDS"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1636451323154",
+        "name": "Cost of RDS",
+        "order": 0,
+        "zone": 1
+      },
+      {
+        "component": "caOverviewReport",
+        "filters": [
+          {
+            "id": "BarChartTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DimensionParam",
+            "source": "manual",
+            "value": [
+              "resource_type"
+            ]
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "service": [
+                {
+                  "id": "AmazonRDS"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1636452734585",
+        "name": "RDS Spend Analysis",
+        "order": 1,
+        "zone": 1
+      },
+      {
+        "component": "caBreakdownTableReport",
+        "filters": [
+          {
+            "id": "GroupByParam",
+            "source": "manual",
+            "value": [
+              "usage_type"
+            ]
+          },
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "resource_type": [
+                {
+                  "id": "Database Instance"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonRDS"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1636451726633",
+        "name": "RDS Instance Table",
+        "order": 2,
+        "zone": 1
+      },
+      {
+        "component": "caResourcesList",
+        "filters": [
+          {
+            "id": "CostTypeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "DateRangeParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "CalendarPeriodParam",
+            "scope": null,
+            "source": "default"
+          },
+          {
+            "id": "SelectParam",
+            "source": "manual",
+            "value": {
+              "resource_type": [
+                {
+                  "id": "Database Instance"
+                }
+              ],
+              "service": [
+                {
+                  "id": "AmazonRDS"
+                }
+              ]
+            }
+          }
+        ],
+        "id": "1636452480847",
+        "name": "RDS Instances",
+        "order": 3,
+        "zone": 1
+      }
+    ]
+  },
+  "visibility": "public",
+  "scope": []
+}
